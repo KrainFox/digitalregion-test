@@ -16,6 +16,14 @@ class Autorization
         if ($result==1){
             session_start();
             $_SESSION['id'] = $query['id'];
+            $_SESSION['login'] = $query['login'];
+            $_SESSION['password'] = $query['password'];
+            $_SESSION['famil'] = $query['famil'];
+            $_SESSION['name'] = $query['name'];
+            $_SESSION['parent'] = $query['parent'];
+            $_SESSION['post'] = $query['post'];
+            $_SESSION['email'] = $query['email'];
+            $_SESSION['phone'] = $query['phone'];
             echo json_encode(array(
                                "check"=>TRUE,
                                "login" => $query['login'],

@@ -14,6 +14,8 @@ $(function() {//Обработчик нажатия на кнопки сдела
                     let sucesLog = JSON.parse(data);//.parse(data);
                     if (sucesLog.check){
                         $('.logForm').toggleClass('hidden');
+                        $('.cabinet').toggleClass('hidden');
+                        $('.stat').toggleClass('hidden');
                         $('.login').val(sucesLog.login);
                         $('.password').val(sucesLog.pass);
                         $('.famil').val(sucesLog.famil);
